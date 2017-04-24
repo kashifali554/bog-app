@@ -15,7 +15,7 @@ class CreaturesController < ApplicationController
 
     # if creature saves, redirect to route that displays all creatures
     if creature.save
-      redirect_to creatures_path
+      redirect_to creature
       # redirect_to creatures_path is equivalent to:
       # redirect_to "/creatures"
     end
@@ -27,10 +27,10 @@ class CreaturesController < ApplicationController
   end
 
 
-  private
+  # private
 
-  def creature_params
-    # whitelist params return whitelisted version
-    params.require(:creature).permit(:name, :description)
-  end
+  # def creature_params
+  #   # whitelist params return whitelisted version
+  #   params.require(:creature).permit(:name, :description)
+  # end
 end
